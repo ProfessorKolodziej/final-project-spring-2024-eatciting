@@ -5,3 +5,15 @@
 // - Do not use onclick - use addEventListener instead
 // - Run npm run test regularly to check autograding
 // - You'll need to link this file to your HTML :)
+
+
+const wheel = document.querySelector('.wheel');
+const spinbtn = document.querySelector("#spin");
+const value = Math.ceil(Math.random()*1440)
+
+function pickdish() {
+    wheel.style.transform = "rotate("+value+"deg)";
+    value += Math.ceil(Math.random()*1440);}
+
+
+spinbtn.addEventListener("click", pickdish);
