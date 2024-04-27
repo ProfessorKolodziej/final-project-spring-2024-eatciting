@@ -64,13 +64,21 @@ wheel.addEventListener("transitionend", showGift);
 
 // Dish Selection
 const showDishbtn = document.querySelector(".gifthide")
+const showPlate = document.querySelector(".platehide")
 const hideWheel = document.querySelector(".wheel")
 const selectedDish = cuisineDish[Math.floor(Math.random() * cuisineDish.length)];
-function showDish() {
+function showDish1() {
+	showPlate.classList.toggle('plate')
+	showPlate.classList.toggle('platehide')
+}
+function showDish2() {
 	hideWheel.classList.toggle('wheelhide')
 	hideWheel.classList.toggle('wheel')
 }
-showDishbtn.addEventListener("click", showDish, showGift)
-
+async function showDish() {
+	await showDish1();
+	showDish2();
+}
+showDishbtn.addEventListener("click", showDish)
 
 

@@ -1,4 +1,4 @@
-@media screen and (375px <=width <=834px) {
+@media screen and (375px <=width <834px) {
 	body {
 		background-image: url(../images/Table.svg);
 		background-position: 50% -7%;
@@ -71,15 +71,21 @@
 
 }
 
-@media screen and (834px <=width <=1279px) {
+@media screen and (834px <=width <1280px) {
 	body {
 		background-image: url(../images/Table.svg);
-		background-position: 50% -20%;
+		background-position: 50% 200px;
+		background-size: 220%;
 		background-repeat: no-repeat;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(8, 1fr);
 	}
 
+	/* Title Bar & Instruction Line */
+
 	.header {
-		padding: 10px;
+		padding: 20px;
 		background-color: #66BE71;
 		font-family: "Koulen";
 		color: white;
@@ -88,6 +94,8 @@
 		font-size: 2em;
 		letter-spacing: 5px;
 		margin-top: 0px;
+		grid-column: 1 / span 6;
+		grid-row: 1 / span 1;
 	}
 
 	.title {
@@ -97,6 +105,8 @@
 		font-size: 2em;
 		margin-top: 50px;
 		letter-spacing: 2px;
+		grid-column: 1 / span 6;
+		grid-row: 2 / span 1;
 	}
 
 	h1 {
@@ -104,104 +114,69 @@
 		margin: 0px;
 	}
 
+	/* Main Part */
+
 	.main {
-		display: flex;
-		flex-direction: row;
+		display: grid;
+		grid-template-rows: 1;
+		grid-template-columns: repeat(8, 1fr);
 		justify-content: center;
-		scale: 70%;
+		margin-top: 30px;
+		scale: 100%;
+		grid-column: 1 / span 6;
+		grid-row: 3/ span 9;
 	}
+
+	/* Main Part  Element*/
 
 	.fork {
-		position: absolute;
-		margin-left: -100%;
-		margin-top: 10%;
-		height: 80%;
-
-	}
-
-	.wheel {
-		height: 80%;
-		transition: transform 5s ease-in-out;
+		max-width: 120%;
+		grid-row: 1;
+		grid-column: 1/span 1
 	}
 
 	.spoon {
-		position: absolute;
-		margin-top: 10%;
-		margin-left: 100%;
-		height: 80%;
+		max-width: 120%;
+		grid-row: 1;
+		grid-column: 8/span 1;
 	}
 
-	#spin {
-		position: absolute;
-		margin-left: 48%;
-	}
-
-}
-
-@media screen and (width >=1280px) {
-	body {
-		background-image: url(../images/Table.svg);
-		background-position: 50% -15%;
-		background-repeat: no-repeat;
-	}
-
-	.header {
-		padding: 10px;
-		background-color: #66BE71;
-		font-family: "Koulen";
-		color: white;
-		margin-right: 0px;
-		text-align: center;
-		font-size: 2em;
-		letter-spacing: 5px;
-		margin-top: 0px;
-	}
-
-	.title {
-		font-family: "Koulen";
-		color: #434343;
-		text-align: center;
-		font-size: 2em;
-		margin-top: 50px;
-		letter-spacing: 2px;
-	}
-
-	h1 {
-		border: 0px;
-		margin: 0px;
-	}
-
-	.main {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		margin-top: 30px;
-		scale: 90%;
-	}
-
-	.fork {
-		margin: auto;
-		height: 80%;
-	}
+	/* Spin Wheel*/
 
 	.wheel {
-		height: 80%;
-		transition: transform 5s ease-in-out;
-		margin-top: 3%;
+		margin-top: 50px;
+		max-width: 100%;
+		transition: transform 3s ease-in-out;
+		grid-row: 1;
+		grid-column: 2/span 6;
 	}
 
 	.wheelhide {
-		visibility: hidden;
+		display: none;
+	}
+
+	/* Blank Plate*/
+
+	.platehide {
+		display: none;
 	}
 
 	.plate {
-		position: absolute;
-		z-index: -1;
+		margin-top: 50px;
+		max-width: 100%;
+		transition: transform 3s ease-in-out;
+		grid-row: 1;
+		grid-column: 2/span 6;
 	}
 
-	.spoon {
-		margin: auto;
-		height: 80%;
+	/* Gift Box*/
+
+	.giftbox {
+		grid-row: 1;
+		grid-column: 4/span 2;
+		z-index: 1;
+		display: flex;
+		justify-content: center;
 	}
 
 	.gifthide {
@@ -209,27 +184,187 @@
 	}
 
 	.gift {
-		position: absolute;
-		margin-top: 25%;
 		background: url(../images/gift.svg);
-		width: 170px;
-		height: 170px;
+		margin-top: 260px;
+		width: 160px;
+		height: 160px;
 		border: none;
+		transition-duration: 0.4s;
+	}
+
+	.gift:hover {
+		transform: scale(1.2);
+	}
+
+	/* Start Button*/
+
+	.start {
+		display: flex;
+		justify-content: center;
+		grid-column: 1 / span 6;
+		grid-row: 3 / span 2;
+		z-index: 1;
 	}
 
 	#spin {
-		position: absolute;
-		margin-left: 46%;
-		padding: 20px;
-		padding-top: 10px;
-		font-size: 3em;
-		border-color: #F1E363;
-		border-width: 10px;
-		border-style: solid;
-		border-radius: 20px;
-		font-family: "Koulen";
-		color: #4F8A57;
+		width: 220px;
+		height: 200px;
+		background: url(../images/start.svg);
+		border: none;
+		margin-top: -10px;
+		transition-duration: 0.4s;
+	}
 
+	#spin:hover {
+		transform: scale(1.2);
+	}
+
+}
+
+@media screen and (width >=1280px) {
+	body {
+		background-image: url(../images/Table.svg);
+		background-position: 50% 200px;
+		background-size: 150%;
+		background-repeat: no-repeat;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(10, 1fr);
+	}
+
+	/* Title Bar & Instruction Line */
+
+	.header {
+		padding: 20px;
+		background-color: #66BE71;
+		font-family: "Koulen";
+		color: white;
+		margin-right: 0px;
+		text-align: center;
+		font-size: 2em;
+		letter-spacing: 5px;
+		margin-top: 0px;
+		grid-column: 1 / span 6;
+		grid-row: 1 / span 1;
+	}
+
+	.title {
+		font-family: "Koulen";
+		color: #434343;
+		text-align: center;
+		font-size: 2em;
+		margin-top: 50px;
+		letter-spacing: 2px;
+		grid-column: 1 / span 6;
+		grid-row: 2 / span 1;
+	}
+
+	h1 {
+		border: 0px;
+		margin: 0px;
+	}
+
+	/* Main Part */
+
+	.main {
+		display: grid;
+		grid-template-rows: 1;
+		grid-template-columns: 3;
+		justify-content: center;
+		margin-top: 30px;
+		scale: 100%;
+		grid-column: 1 / span 6;
+		grid-row: 3/ span 9;
+	}
+
+	/* Main Part  Element*/
+
+	.fork {
+		height: 60%;
+		grid-row: 1;
+		grid-column: 1;
+	}
+
+	.spoon {
+		height: 60%;
+		grid-row: 1;
+		grid-column: 3;
+	}
+
+	/* Spin Wheel*/
+
+	.wheel {
+		height: 80%;
+		transition: transform 3s ease-in-out;
+		grid-row: 1;
+		grid-column: 2;
+	}
+
+	.wheelhide {
+		display: none;
+	}
+
+	/* Blank Plate*/
+
+	.platehide {
+		display: none;
+	}
+
+	.plate {
+		height: 80%;
+		margin-top: 3%;
+		grid-row: 1;
+		grid-column: 2;
+	}
+
+	/* Gift Box*/
+
+	.giftbox {
+		grid-row: 1;
+		grid-column: 2;
+		z-index: 1;
+		display: flex;
+		justify-content: center;
+	}
+
+	.gifthide {
+		display: none;
+	}
+
+	.gift {
+		background: url(../images/gift.svg);
+		margin-top: 320px;
+		width: 160px;
+		height: 160px;
+		border: none;
+		transition-duration: 0.4s;
+	}
+
+	.gift:hover {
+		transform: scale(1.2);
+	}
+
+	/* Start Button*/
+
+	.start {
+		display: flex;
+		justify-content: center;
+		grid-column: 1 / span 6;
+		grid-row: 3 / span 2;
+		z-index: 1;
+	}
+
+	#spin {
+		width: 220px;
+		height: 200px;
+		background: url(../images/start.svg);
+		border: none;
+		margin-top: -10px;
+		transition-duration: 0.4s;
+	}
+
+	#spin:hover {
+		transform: scale(1.2);
 	}
 
 }
