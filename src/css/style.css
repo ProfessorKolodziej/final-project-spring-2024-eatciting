@@ -1,11 +1,11 @@
-@media screen and (375px <= width <= 834px){
-	body{
+@media screen and (375px <=width <=834px) {
+	body {
 		background-image: url(../images/Table.svg);
 		background-position: 50% -7%;
 		background-repeat: no-repeat;
 	}
 
-	.header{
+	.header {
 		padding: 10px;
 		background-color: #66BE71;
 		font-family: "Koulen";
@@ -14,8 +14,10 @@
 		text-align: center;
 		font-size: 2em;
 		letter-spacing: 5px;
-		margin-top: 0px;}
-	.title{
+		margin-top: 0px;
+	}
+
+	.title {
 		font-family: "Koulen";
 		color: #434343;
 		text-align: center;
@@ -23,56 +25,60 @@
 		margin-top: 70px;
 		letter-spacing: 2px;
 	}
-	h1{
+
+	h1 {
 		border: 0px;
 		margin: 0px;
 	}
 
-	.main{
+	.main {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		scale: 130%;
 		margin-top: 90px;
 	}
-	
-	.fork{
+
+	.fork {
 		position: absolute;
 		margin-top: -40%;
 		margin-left: -65%;
 		scale: 36%;
 	}
-	.wheel{
+
+	.wheel {
 		margin: 0px;
 		width: 75%;
 		transition: transform 1s ease-in-out;
 	}
-	  
-	.spoon{
+
+	.spoon {
 		position: absolute;
-		margin-left:66%;
+		margin-left: 66%;
 		margin-top: -40%;
 		scale: 35%;
-	}	
+	}
 
-	img{
+	img {
 		margin-top: 0px;
 	}
-	#spin{
+
+	#spin {
 		position: absolute;
 		margin-left: 45%;
-		
+
 	}
-	
+
 }
 
-@media screen and (834px <= width <= 1279px) {
-	body{
+@media screen and (834px <=width <=1279px) {
+	body {
 		background-image: url(../images/Table.svg);
 		background-position: 50% -20%;
 		background-repeat: no-repeat;
 	}
-	.header{
+
+	.header {
 		padding: 10px;
 		background-color: #66BE71;
 		font-family: "Koulen";
@@ -81,8 +87,10 @@
 		text-align: center;
 		font-size: 2em;
 		letter-spacing: 5px;
-		margin-top: 0px;}
-	.title{
+		margin-top: 0px;
+	}
+
+	.title {
 		font-family: "Koulen";
 		color: #434343;
 		text-align: center;
@@ -90,47 +98,54 @@
 		margin-top: 50px;
 		letter-spacing: 2px;
 	}
-	h1{
+
+	h1 {
 		border: 0px;
 		margin: 0px;
 	}
 
-	.main{
+	.main {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		scale: 70%;
 	}
-	.fork{
+
+	.fork {
 		position: absolute;
 		margin-left: -100%;
 		margin-top: 10%;
 		height: 80%;
-		
+
 	}
-	.wheel{
+
+	.wheel {
 		height: 80%;
 		transition: transform 5s ease-in-out;
 	}
-	.spoon{
+
+	.spoon {
 		position: absolute;
 		margin-top: 10%;
 		margin-left: 100%;
 		height: 80%;
 	}
-	#spin{
+
+	#spin {
 		position: absolute;
 		margin-left: 48%;
 	}
 
 }
-@media screen and (width >= 1280px) {
-	body{
+
+@media screen and (width >=1280px) {
+	body {
 		background-image: url(../images/Table.svg);
 		background-position: 50% -15%;
 		background-repeat: no-repeat;
 	}
-	.header{
+
+	.header {
 		padding: 10px;
 		background-color: #66BE71;
 		font-family: "Koulen";
@@ -139,8 +154,10 @@
 		text-align: center;
 		font-size: 2em;
 		letter-spacing: 5px;
-		margin-top: 0px;}
-	.title{
+		margin-top: 0px;
+	}
+
+	.title {
 		font-family: "Koulen";
 		color: #434343;
 		text-align: center;
@@ -148,34 +165,71 @@
 		margin-top: 50px;
 		letter-spacing: 2px;
 	}
-	h1{
+
+	h1 {
 		border: 0px;
 		margin: 0px;
 	}
 
-	.main{
+	.main {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		margin-top: 30px;
 		scale: 90%;
 	}
-	.fork{
-		margin:auto;
-		height: 80%;
-	}
-	.wheel{
-		height: 80%;
-		transition: transform 5s ease-in-out;
-	}
-	.spoon{
+
+	.fork {
 		margin: auto;
 		height: 80%;
 	}
-	
-	#spin{
+
+	.wheel {
+		height: 80%;
+		transition: transform 5s ease-in-out;
+		margin-top: 3%;
+	}
+
+	.wheelhide {
+		visibility: hidden;
+	}
+
+	.plate {
 		position: absolute;
-		margin-left: 48%;
+		z-index: -1;
+	}
+
+	.spoon {
+		margin: auto;
+		height: 80%;
+	}
+
+	.gifthide {
+		display: none;
+	}
+
+	.gift {
+		position: absolute;
+		margin-top: 25%;
+		background: url(../images/gift.svg);
+		width: 170px;
+		height: 170px;
+		border: none;
+	}
+
+	#spin {
+		position: absolute;
+		margin-left: 46%;
+		padding: 20px;
+		padding-top: 10px;
+		font-size: 3em;
+		border-color: #F1E363;
+		border-width: 10px;
+		border-style: solid;
+		border-radius: 20px;
+		font-family: "Koulen";
+		color: #4F8A57;
+
 	}
 
 }
