@@ -1,81 +1,8 @@
-@media screen and (375px <=width <834px) {
-	body {
-		background-image: url(../images/Table.svg);
-		background-position: 50% -7%;
-		background-repeat: no-repeat;
-	}
-
-	.header {
-		padding: 10px;
-		background-color: #66BE71;
-		font-family: "Koulen";
-		color: white;
-		margin-right: 0px;
-		text-align: center;
-		font-size: 2em;
-		letter-spacing: 5px;
-		margin-top: 0px;
-	}
-
-	.title {
-		font-family: "Koulen";
-		color: #434343;
-		text-align: center;
-		font-size: 1.2em;
-		margin-top: 70px;
-		letter-spacing: 2px;
-	}
-
-	h1 {
-		border: 0px;
-		margin: 0px;
-	}
-
-	.main {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		scale: 130%;
-		margin-top: 90px;
-	}
-
-	.fork {
-		position: absolute;
-		margin-top: -40%;
-		margin-left: -65%;
-		scale: 36%;
-	}
-
-	.wheel {
-		margin: 0px;
-		width: 75%;
-		transition: transform 1s ease-in-out;
-	}
-
-	.spoon {
-		position: absolute;
-		margin-left: 66%;
-		margin-top: -40%;
-		scale: 35%;
-	}
-
-	img {
-		margin-top: 0px;
-	}
-
-	#spin {
-		position: absolute;
-		margin-left: 45%;
-
-	}
-
-}
-
-@media screen and (834px <=width <1280px) {
+@media screen and (320px <=width <834px) {
 	body {
 		background-image: url(../images/Table.svg);
 		background-position: 50% 200px;
-		background-size: 220%;
+		background-size: 280%;
 		background-repeat: no-repeat;
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
@@ -85,7 +12,157 @@
 	/* Title Bar & Instruction Line */
 
 	.header {
-		padding: 20px;
+		padding: 5%;
+		background-color: #66BE71;
+		font-family: "Koulen";
+		color: white;
+		margin-right: 0px;
+		text-align: center;
+		font-size: 1em;
+		letter-spacing: 5px;
+		margin-top: 0px;
+		grid-column: 1 / span 6;
+		grid-row: 1 / span 1;
+	}
+
+	.title {
+		font-family: "Koulen";
+		color: #434343;
+		text-align: center;
+		font-size: 1em;
+		margin-top: 10px;
+		letter-spacing: 2px;
+		grid-column: 1 / span 6;
+		grid-row: 2 / span 1;
+	}
+
+	h1 {
+		border: 0px;
+		margin: 0px;
+	}
+
+	/* Main Part */
+
+	.main {
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: repeat(9, 1fr);
+		justify-content: center;
+		margin-top: 30px;
+		scale: 100%;
+		grid-column: 1 / span 6;
+		grid-row: 3/ span 9;
+	}
+
+	/* Main Part  Element*/
+
+	.fork {
+		margin-top: 50%;
+		height: 30%;
+		grid-row: 1/span 3;
+		grid-column: 1/span 1;
+		z-index: 1;
+	}
+
+	.spoon {
+		margin-top: 50%;
+		height: 30%;
+		grid-row: 1/span 3;
+		grid-column: 9/span 1;
+		z-index: 1;
+	}
+
+	/* Spin Wheel*/
+
+	.wheel {
+		width: 100%;
+		margin-top: -50px;
+		transition: transform 3s ease-in-out;
+		grid-row: 1/ span 3;
+		grid-column: 1/span 9;
+	}
+
+	.wheelhide {
+		display: none;
+	}
+
+	/* Blank Plate*/
+
+	.platehide {
+		display: none;
+	}
+
+	.plate {
+		margin-top: 50px;
+		width: 100%;
+		transition: transform 3s ease-in-out;
+		grid-row: 1/ span 3;
+		grid-column: 1/span 9;
+	}
+
+	/* Gift Box*/
+
+	.gifthide {
+		display: none;
+	}
+
+	.gift {
+		background: url(../images/gift.svg);
+		margin-top: 80px;
+		width: 160px;
+		height: 160px;
+		border: none;
+		transition-duration: 0.4s;
+		grid-row: 2;
+		grid-column: 5/ span 1;
+		z-index: 1;
+	}
+
+	.gift:hover {
+		transform: scale(1.2);
+	}
+
+	/* Start Button*/
+
+	.start {
+		display: flex;
+		justify-content: center;
+		grid-column: 1 / span 6;
+		grid-row: 2 / span 2;
+		z-index: 1;
+	}
+
+	#spin {
+		width: 220px;
+		height: 200px;
+		scale: 60%;
+		background: url(../images/start.svg);
+		border: none;
+		transition-duration: 0.4s;
+	}
+
+	#spin:hover {
+		transform: scale(1.2);
+	}
+
+
+}
+
+@media screen and (834px <=width <1280px) {
+	body {
+		background-image: url(../images/Table.svg);
+		background-position: 50% 200px;
+		background-size: 280%;
+		background-repeat: no-repeat;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(8, 1fr);
+	}
+
+	/* Title Bar & Instruction Line */
+
+	.header {
+		padding: 5%;
 		background-color: #66BE71;
 		font-family: "Koulen";
 		color: white;
@@ -118,8 +195,8 @@
 
 	.main {
 		display: grid;
-		grid-template-rows: 1;
-		grid-template-columns: repeat(8, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: repeat(9, 1fr);
 		justify-content: center;
 		margin-top: 30px;
 		scale: 100%;
@@ -130,25 +207,29 @@
 	/* Main Part  Element*/
 
 	.fork {
-		max-width: 120%;
-		grid-row: 1;
-		grid-column: 1/span 1
+		margin-top: 50%;
+		height: 60%;
+		grid-row: 1/span 3;
+		grid-column: 1/span 1;
+		z-index: 1;
 	}
 
 	.spoon {
-		max-width: 120%;
-		grid-row: 1;
-		grid-column: 8/span 1;
+		margin-top: 50%;
+		height: 60%;
+		grid-row: 1/span 3;
+		grid-column: 9/span 1;
+		z-index: 1;
 	}
 
 	/* Spin Wheel*/
 
 	.wheel {
 		margin-top: 50px;
-		max-width: 100%;
+		width: 100%;
 		transition: transform 3s ease-in-out;
-		grid-row: 1;
-		grid-column: 2/span 6;
+		grid-row: 1/ span 3;
+		grid-column: 1/span 9;
 	}
 
 	.wheelhide {
@@ -163,21 +244,13 @@
 
 	.plate {
 		margin-top: 50px;
-		max-width: 100%;
+		width: 100%;
 		transition: transform 3s ease-in-out;
-		grid-row: 1;
-		grid-column: 2/span 6;
+		grid-row: 1/ span 3;
+		grid-column: 1/span 9;
 	}
 
 	/* Gift Box*/
-
-	.giftbox {
-		grid-row: 1;
-		grid-column: 4/span 2;
-		z-index: 1;
-		display: flex;
-		justify-content: center;
-	}
 
 	.gifthide {
 		display: none;
@@ -185,11 +258,14 @@
 
 	.gift {
 		background: url(../images/gift.svg);
-		margin-top: 260px;
+		margin-top: 80px;
 		width: 160px;
 		height: 160px;
 		border: none;
 		transition-duration: 0.4s;
+		grid-row: 2;
+		grid-column: 5/ span 1;
+		z-index: 1;
 	}
 
 	.gift:hover {
@@ -319,14 +395,6 @@
 
 	/* Gift Box*/
 
-	.giftbox {
-		grid-row: 1;
-		grid-column: 2;
-		z-index: 1;
-		display: flex;
-		justify-content: center;
-	}
-
 	.gifthide {
 		display: none;
 	}
@@ -334,10 +402,14 @@
 	.gift {
 		background: url(../images/gift.svg);
 		margin-top: 320px;
+		margin-left: 40%;
 		width: 160px;
 		height: 160px;
 		border: none;
 		transition-duration: 0.4s;
+		grid-row: 1;
+		grid-column: 2;
+		z-index: 1;
 	}
 
 	.gift:hover {
