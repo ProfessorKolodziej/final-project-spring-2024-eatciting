@@ -153,12 +153,13 @@
 	#spin:hover {
 		transform: scale(1.2);
 	}
-	
-	}
-	
+
+}
+
 
 
 @media screen and (834px <=width <1280px) {
+
 	body {
 		background-image: url(../images/Table.svg);
 		background-position: 50% 200px;
@@ -236,6 +237,7 @@
 
 	.wheel {
 		margin-top: 50px;
+		height: 818px;
 		width: 100%;
 		transition: transform 3s ease-in-out;
 		grid-row: 1/ span 3;
@@ -254,6 +256,7 @@
 
 	.plate {
 		margin-top: 50px;
+		height: 818px;
 		width: 100%;
 		transition: transform 3s ease-in-out;
 		grid-row: 1/ span 3;
@@ -272,7 +275,7 @@
 		height: 160px;
 		border: none;
 		transition-duration: 0.4s;
-		grid-row: 2;
+		grid-row: 2/ span 1;
 		grid-column: 5/ span 1;
 		z-index: 1;
 	}
@@ -306,12 +309,77 @@
 
 
 	/*order button*/
+	.results {
+		display: grid;
+		grid-template-columns: repeat(9, 1fr);
+		grid-template-rows: repeat(10, 1fr);
+		grid-row: 1/ span 3;
+		grid-column: 1/span 9;
+	}
 
+	.resultshide {
+		display: none;
+	}
+
+	#order {
+		border: #4F8A57 6px solid;
+		border-radius: 70px;
+		font-family: "Kaushan Script", cursive;
+		background-color: #66BE71;
+		color: white;
+		font-size: 2em;
+		padding: 20px;
+		grid-row: 4/span 1;
+		grid-column: 3/span 5;
+		transition-duration: 0.4s;
+	}
+
+	#resetdish {
+		border: #F7B60E 6px solid;
+		border-radius: 70px;
+		font-family: "Koulen";
+		margin-top: 20px;
+		background-color: #F1E363;
+		color: black;
+		font-size: 1.5em;
+		padding: 20px;
+		grid-row: 5/span 1;
+		grid-column: 3/span 2;
+		transition-duration: 0.4s;
+	}
+
+	#resetall {
+		border: #F70E0E 6px solid;
+		border-radius: 70px;
+		font-family: "Koulen";
+		margin-top: 20px;
+		background-color: #F17D63;
+		color: black;
+		font-size: 1.5em;
+		padding: 20px;
+		grid-row: 5/span 1;
+		grid-column: 6/span 2;
+		transition-duration: 0.4s;
+	}
+
+	#order:hover {
+		transform: scale(1.2);
+	}
+
+	#resetdish:hover {
+		transform: scale(1.2);
+	}
+
+	#resetall:hover {
+		transform: scale(1.2);
+	}
 
 
 }
 
 @media screen and (width >=1280px) {
+
+
 	body {
 		background-image: url(../images/Table.svg);
 		background-position: 50% 200px;
@@ -401,7 +469,7 @@
 	}
 
 	.plate {
-		height: 80%;
+		height: 845.9px;
 		margin-top: 3%;
 		grid-row: 1;
 		grid-column: 2;
@@ -476,7 +544,7 @@
 		font-size: 2em;
 		padding: 20px;
 		grid-row: 4/span 1;
-		grid-column: 4/span 3;
+		grid-column: 3/span 5;
 		transition-duration: 0.4s;
 	}
 
