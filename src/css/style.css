@@ -153,13 +153,10 @@
 	#spin:hover {
 		transform: scale(1.2);
 	}
+	
+	}
+	
 
-	/*order button*/
-
-
-
-
-}
 
 @media screen and (834px <=width <1280px) {
 	body {
@@ -306,6 +303,11 @@
 	#spin:hover {
 		transform: scale(1.2);
 	}
+
+
+	/*order button*/
+
+
 
 }
 
