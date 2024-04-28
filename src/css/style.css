@@ -461,6 +461,10 @@
 		grid-column: 2;
 	}
 
+	.resultshide {
+		display: none;
+	}
+
 	#order {
 		border: #4F8A57 6px solid;
 		border-radius: 70px;
