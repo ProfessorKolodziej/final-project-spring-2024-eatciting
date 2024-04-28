@@ -12,7 +12,7 @@
 	/* Title Bar & Instruction Line */
 
 	.header {
-		padding: 5%;
+		padding: 10%;
 		background-color: #66BE71;
 		font-family: "Koulen";
 		color: white;
@@ -45,7 +45,7 @@
 
 	.main {
 		display: grid;
-		grid-template-rows: repeat(3, 1fr);
+		grid-template-rows: repeat(1, 1fr);
 		grid-template-columns: repeat(9, 1fr);
 		justify-content: center;
 		margin-top: 30px;
@@ -59,7 +59,7 @@
 	.fork {
 		margin-top: 50%;
 		height: 30%;
-		grid-row: 1/span 3;
+		grid-row: 1/span 1;
 		grid-column: 1/span 1;
 		z-index: 1;
 	}
@@ -67,7 +67,7 @@
 	.spoon {
 		margin-top: 50%;
 		height: 30%;
-		grid-row: 1/span 3;
+		grid-row: 1/span 1;
 		grid-column: 9/span 1;
 		z-index: 1;
 	}
@@ -78,7 +78,7 @@
 		width: 100%;
 		margin-top: -50px;
 		transition: transform 3s ease-in-out;
-		grid-row: 1/ span 3;
+		grid-row: 1/ span 1;
 		grid-column: 1/span 9;
 	}
 
@@ -93,10 +93,10 @@
 	}
 
 	.plate {
-		margin-top: 50px;
 		width: 100%;
+		margin-top: -50px;
 		transition: transform 3s ease-in-out;
-		grid-row: 1/ span 3;
+		grid-row: 1/ span 1;
 		grid-column: 1/span 9;
 	}
 
@@ -108,12 +108,13 @@
 
 	.gift {
 		background: url(../images/gift.svg);
-		margin-top: 80px;
+		margin-top: 10%;
+		scale: 50%;
 		width: 160px;
 		height: 160px;
 		border: none;
 		transition-duration: 0.4s;
-		grid-row: 2;
+		grid-row: 1;
 		grid-column: 5/ span 1;
 		z-index: 1;
 	}
@@ -135,7 +136,7 @@
 	#spin {
 		width: 220px;
 		height: 200px;
-		scale: 60%;
+		scale: 50%;
 		background: url(../images/start.svg);
 		border: none;
 		transition-duration: 0.4s;
@@ -258,7 +259,6 @@
 
 	.gift {
 		background: url(../images/gift.svg);
-		margin-top: 80px;
 		width: 160px;
 		height: 160px;
 		border: none;
