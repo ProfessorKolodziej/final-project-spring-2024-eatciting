@@ -62,7 +62,7 @@ function showGift() {
 };
 wheel.addEventListener("transitionend", showGift);
 
-// Dish Selection
+// Box Popout & Wheel Hide
 const showDishbtn = document.querySelector(".gifthide")
 const showPlate = document.querySelector(".platehide")
 const hideWheel = document.querySelector(".wheel")
