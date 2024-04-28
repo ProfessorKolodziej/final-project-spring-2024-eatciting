@@ -54,11 +54,14 @@ const showBox = document.querySelector('.gifthide');
 function showGift() {
 	showBox.classList.toggle('gifthide')
 	showBox.classList.toggle('gift')
-	window.scroll({
-		top: 400,
-		left: 0,
-		behavior: 'smooth'
-	});
+	if (window.innerWidth >= 834) {
+		window.scroll({
+			top: 400,
+			left: 0,
+			behavior: 'smooth'
+		});
+	}
+
 };
 wheel.addEventListener("transitionend", showGift);
 
@@ -67,6 +70,8 @@ const showDishbtn = document.querySelector(".gifthide")
 const showPlate = document.querySelector(".platehide")
 const hideWheel = document.querySelector(".wheel")
 const selectedDish = cuisineDish[Math.floor(Math.random() * cuisineDish.length)];
+const orderDish = document.getElementById('order').textContent = 'Order: ' + selectedDish;
+
 function showDish1() {
 	showPlate.classList.toggle('plate')
 	showPlate.classList.toggle('platehide')
