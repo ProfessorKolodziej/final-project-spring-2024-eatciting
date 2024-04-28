@@ -307,36 +307,6 @@
 
 	/*order button*/
 
-		.results {
-			display: grid;
-			grid-template-columns: repeat(9, 1fr);
-			grid-template-rows: repeat(10, 1fr);
-			grid-row: 1;
-			grid-column: 2;
-		}
-	#order {
-		border: #4F8A57 6px solid;
-		border-radius: 70px;
-		font-family: "Kaushan Script", cursive;
-		background-color: #66BE71;
-		padding: 30px;
-		color: white;
-		font-size: 2em;
-		grid-row: 2/span 1;
-		grid-column: 2/span 1;
-		transition-duration: 0.4s;
-	}
-	#resetdish {
-		border: #F7B60E 6px solid;
-		border-radius: 70px;
-		font-family: "Koulen";
-		margin-top: 20px;
-		background-color: #F1E363;
-		color: black;
-		font-size: 1em;
-		grid-row: 4/span 1;
-		grid-column: 1/span 2;
-	}
 
 
 }
