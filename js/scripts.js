@@ -13,8 +13,8 @@ const spinDegree = Math.ceil(2 + Math.random() * 60) * 45;
 
 function spinWheel() {
 	wheel.style.transform = "rotate(" + spinDegree + "deg)";
-	console.log(cuisineName, selectedDish);
 }
+
 spinbtn.addEventListener("click", spinWheel);
 
 // Cuisine Selection
@@ -65,12 +65,11 @@ function showGift() {
 };
 wheel.addEventListener("transitionend", showGift);
 
-// Box Popout & Wheel Hide
+// Box Popout & Result Display
 const showDishbtn = document.querySelector(".gifthide")
 const showPlate = document.querySelector(".platehide")
 const hideWheel = document.querySelector(".wheel")
-const selectedDish = cuisineDish[Math.floor(Math.random() * cuisineDish.length)];
-const orderDish = document.getElementById('order').textContent = 'Order: ' + selectedDish;
+const showResult = document.querySelector(".resultshide")
 
 function showDish1() {
 	showPlate.classList.toggle('plate')
@@ -80,10 +79,32 @@ function showDish2() {
 	hideWheel.classList.toggle('wheelhide')
 	hideWheel.classList.toggle('wheel')
 }
+function showDish3() {
+	showResult.classList.toggle('results')
+	showResult.classList.toggle('resultshide')
+}
+function showDish4() {
+	const selectedDish = cuisineDish[Math.floor(Math.random() * cuisineDish.length)];
+	const orderDish = document.getElementById('order').textContent = 'Order: ' + selectedDish;
+}
+
 async function showDish() {
 	await showDish1();
 	showDish2();
+	showDish3();
+	showDish4();
+	showGift();
 }
 showDishbtn.addEventListener("click", showDish)
+
+// Reset
+const resetDish = document.getElementById('resetdish');
+const reset = document.getElementById('resetall');
+function resetAll() {
+	location.reload();
+}
+resetDish.addEventListener("click", showDish4)
+reset.addEventListener("click", resetAll)
+
 
 
