@@ -1,4 +1,5 @@
 @media screen and (320px <=width <834px) {
+
 	body {
 		background-image: url(../images/Table.svg);
 		background-position: 50% 200px;
@@ -62,11 +63,12 @@
 		grid-template-columns: repeat(9, 1fr);
 		justify-content: center;
 		margin-top: -150px;
+		height: 500px;
 	}
 
 	.fork {
 		margin-top: 150%;
-		height: 30%;
+		height: 50%;
 		grid-row: 1/span 3;
 		grid-column: 1/span 1;
 		z-index: 1;
@@ -74,7 +76,7 @@
 
 	.spoon {
 		margin-top: 150%;
-		height: 30%;
+		height: 50%;
 		grid-row: 1/span 3;
 		grid-column: 9/span 1;
 		z-index: 1;
@@ -151,6 +153,72 @@
 	}
 
 	#spin:hover {
+		transform: scale(1.2);
+	}
+
+	/*order button*/
+	.results {
+		display: grid;
+		grid-template-columns: repeat(9, 1fr);
+		grid-template-rows: repeat(10, 1fr);
+		grid-row: 1/ span 3;
+		grid-column: 1/span 9;
+	}
+
+	.resultshide {
+		display: none;
+	}
+
+	#order {
+		border: #4F8A57 6px solid;
+		border-radius: 70px;
+		font-family: "Kaushan Script", cursive;
+		background-color: #66BE71;
+		color: white;
+		font-size: 1em;
+		padding: 10px;
+		grid-row: 4/span 1;
+		grid-column: 3/span 5;
+		transition-duration: 0.4s;
+	}
+
+	#resetdish {
+		border: #F7B60E 3px solid;
+		border-radius: 70px;
+		font-family: "Koulen";
+		margin-top: 20px;
+		background-color: #F1E363;
+		color: black;
+		font-size: .6em;
+		padding: 5px;
+		grid-row: 5/span 1;
+		grid-column: 3/span 2;
+		transition-duration: 0.4s;
+	}
+
+	#resetall {
+		border: #F70E0E 3px solid;
+		border-radius: 70px;
+		font-family: "Koulen";
+		margin-top: 20px;
+		background-color: #F17D63;
+		color: black;
+		font-size: .8em;
+		padding: 5px;
+		grid-row: 5/span 1;
+		grid-column: 6/span 2;
+		transition-duration: 0.4s;
+	}
+
+	#order:hover {
+		transform: scale(1.2);
+	}
+
+	#resetdish:hover {
+		transform: scale(1.2);
+	}
+
+	#resetall:hover {
 		transform: scale(1.2);
 	}
 
