@@ -1,79 +1,178 @@
-@media screen and (375px <= width <= 834px){
-	body{
+@media screen and (320px <=width <834px) {
+	body {
 		background-image: url(../images/Table.svg);
-		background-position: 50% -7%;
+		background-position: 50% 200px;
+		background-size: 280%;
 		background-repeat: no-repeat;
 	}
 
-	.header{
-		padding: 10px;
+	.header {
+		padding: 5%;
 		background-color: #66BE71;
 		font-family: "Koulen";
 		color: white;
 		margin-right: 0px;
 		text-align: center;
-		font-size: 2em;
+		font-size: 1em;
 		letter-spacing: 5px;
-		margin-top: 0px;}
-	.title{
-		font-family: "Koulen";
-		color: #434343;
-		text-align: center;
-		font-size: 1.2em;
-		margin-top: 70px;
-		letter-spacing: 2px;
-	}
-	h1{
-		border: 0px;
-		margin: 0px;
-	}
-
-	.main{
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		scale: 130%;
-		margin-top: 90px;
-	}
-	
-	.fork{
-		position: absolute;
-		margin-top: -40%;
-		margin-left: -65%;
-		scale: 36%;
-	}
-	.wheel{
-		margin: 0px;
-		width: 75%;
-		transition: transform 1s ease-in-out;
-	}
-	  
-	.spoon{
-		position: absolute;
-		margin-left:66%;
-		margin-top: -40%;
-		scale: 35%;
-	}	
-
-	img{
 		margin-top: 0px;
 	}
-	#spin{
-		position: absolute;
-		margin-left: 45%;
-		
+
+	.title {
+		font-family: "Koulen";
+		color: #434343;
+		text-align: center;
+		font-size: 1em;
+		margin-top: 30px;
+		letter-spacing: 2px;
+		grid-column: 1 / span 6;
+		grid-row: 2 / span 1;
+	}
+
+	h1 {
+		border: 0px;
+		margin: 0px;
+	}
+
+	.start {
+		display: flex;
+		justify-content: center;
+		grid-column: 1 / span 6;
+		grid-row: 3 / span 2;
+	}
+
+	#spin {
+		width: 220px;
+		height: 200px;
+		background: url(../images/start.svg);
+		scale: 60%;
+		border: none;
+		margin-top: -30px;
+		transition-duration: 0.4s;
+		z-index: 1;
+	}
+
+	#spin:hover {
+		transform: scale(1.2);
+	}
+
+	.main {
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: repeat(9, 1fr);
+		justify-content: center;
+		margin-top: -150px;
+	}
+
+	.fork {
+		margin-top: 150%;
+		height: 30%;
+		grid-row: 1/span 3;
+		grid-column: 1/span 1;
+		z-index: 1;
+	}
+
+	.spoon {
+		margin-top: 150%;
+		height: 30%;
+		grid-row: 1/span 3;
+		grid-column: 9/span 1;
+		z-index: 1;
+	}
+
+	/* Spin Wheel*/
+
+	.wheel {
+		margin-top: 50px;
+		width: 100%;
+		transition: transform 3s ease-in-out;
+		grid-row: 1/ span 3;
+		grid-column: 1/span 9;
+	}
+
+	.wheelhide {
+		display: none;
+	}
+
+	/* Blank Plate*/
+
+	.platehide {
+		display: none;
+	}
+
+	.plate {
+		margin-top: 50px;
+		width: 100%;
+		grid-row: 1/ span 3;
+		grid-column: 1/span 9;
+	}
+
+
+	/* Gift Box*/
+
+	.gifthide {
+		display: none;
+	}
+
+	.gift {
+		background: url(../images/gift.svg);
+		width: 160px;
+		height: 160px;
+		scale: 70%;
+		border: none;
+		transition-duration: 0.4s;
+		margin-top: 90%;
+		grid-row: 1;
+		grid-column: 5/ span 1;
+		z-index: 1;
+	}
+
+	.gift:hover {
+		transform: scale(1.2);
+	}
+
+	/* Start Button*/
+
+	.start {
+		display: flex;
+		justify-content: center;
+		grid-column: 1 / span 6;
+		grid-row: 3 / span 2;
+		z-index: 1;
+	}
+
+	#spin {
+		width: 220px;
+		height: 200px;
+		background: url(../images/start.svg);
+		border: none;
+		margin-top: -10px;
+		transition-duration: 0.4s;
+	}
+
+	#spin:hover {
+		transform: scale(1.2);
 	}
 	
-}
-
-@media screen and (834px <= width <= 1279px) {
-	body{
-		background-image: url(../images/Table.svg);
-		background-position: 50% -20%;
-		background-repeat: no-repeat;
 	}
-	.header{
-		padding: 10px;
+	
+
+
+@media screen and (834px <=width <1280px) {
+	body {
+		background-image: url(../images/Table.svg);
+		background-position: 50% 200px;
+		background-size: 280%;
+		background-repeat: no-repeat;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(8, 1fr);
+	}
+
+	/* Title Bar & Instruction Line */
+
+	.header {
+		padding: 5%;
 		background-color: #66BE71;
 		font-family: "Koulen";
 		color: white;
@@ -81,101 +180,340 @@
 		text-align: center;
 		font-size: 2em;
 		letter-spacing: 5px;
-		margin-top: 0px;}
-	.title{
+		margin-top: 0px;
+		grid-column: 1 / span 6;
+		grid-row: 1 / span 1;
+	}
+
+	.title {
 		font-family: "Koulen";
 		color: #434343;
 		text-align: center;
 		font-size: 2em;
 		margin-top: 50px;
 		letter-spacing: 2px;
+		grid-column: 1 / span 6;
+		grid-row: 2 / span 1;
 	}
-	h1{
+
+	h1 {
 		border: 0px;
 		margin: 0px;
 	}
 
-	.main{
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		scale: 70%;
-	}
-	.fork{
-		position: absolute;
-		margin-left: -100%;
-		margin-top: 10%;
-		height: 80%;
-		
-	}
-	.wheel{
-		height: 80%;
-		transition: transform 5s ease-in-out;
-	}
-	.spoon{
-		position: absolute;
-		margin-top: 10%;
-		margin-left: 100%;
-		height: 80%;
-	}
-	#spin{
-		position: absolute;
-		margin-left: 48%;
-	}
+	/* Main Part */
 
-}
-@media screen and (width >= 1280px) {
-	body{
-		background-image: url(../images/Table.svg);
-		background-position: 50% -15%;
-		background-repeat: no-repeat;
-	}
-	.header{
-		padding: 10px;
-		background-color: #66BE71;
-		font-family: "Koulen";
-		color: white;
-		margin-right: 0px;
-		text-align: center;
-		font-size: 2em;
-		letter-spacing: 5px;
-		margin-top: 0px;}
-	.title{
-		font-family: "Koulen";
-		color: #434343;
-		text-align: center;
-		font-size: 2em;
-		margin-top: 50px;
-		letter-spacing: 2px;
-	}
-	h1{
-		border: 0px;
-		margin: 0px;
-	}
-
-	.main{
-		display: flex;
-		flex-direction: row;
+	.main {
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: repeat(9, 1fr);
 		justify-content: center;
 		margin-top: 30px;
-		scale: 90%;
+		scale: 100%;
+		grid-column: 1 / span 6;
+		grid-row: 3/ span 9;
 	}
-	.fork{
-		margin:auto;
+
+	/* Main Part  Element*/
+
+	.fork {
+		margin-top: 50%;
+		height: 60%;
+		grid-row: 1/span 3;
+		grid-column: 1/span 1;
+		z-index: 1;
+	}
+
+	.spoon {
+		margin-top: 50%;
+		height: 60%;
+		grid-row: 1/span 3;
+		grid-column: 9/span 1;
+		z-index: 1;
+	}
+
+	/* Spin Wheel*/
+
+	.wheel {
+		margin-top: 50px;
+		width: 100%;
+		transition: transform 3s ease-in-out;
+		grid-row: 1/ span 3;
+		grid-column: 1/span 9;
+	}
+
+	.wheelhide {
+		display: none;
+	}
+
+	/* Blank Plate*/
+
+	.platehide {
+		display: none;
+	}
+
+	.plate {
+		margin-top: 50px;
+		width: 100%;
+		transition: transform 3s ease-in-out;
+		grid-row: 1/ span 3;
+		grid-column: 1/span 9;
+	}
+
+	/* Gift Box*/
+
+	.gifthide {
+		display: none;
+	}
+
+	.gift {
+		background: url(../images/gift.svg);
+		width: 160px;
+		height: 160px;
+		border: none;
+		transition-duration: 0.4s;
+		grid-row: 2;
+		grid-column: 5/ span 1;
+		z-index: 1;
+	}
+
+	.gift:hover {
+		transform: scale(1.2);
+	}
+
+	/* Start Button*/
+
+	.start {
+		display: flex;
+		justify-content: center;
+		grid-column: 1 / span 6;
+		grid-row: 3 / span 2;
+		z-index: 1;
+	}
+
+	#spin {
+		width: 220px;
+		height: 200px;
+		background: url(../images/start.svg);
+		border: none;
+		margin-top: -10px;
+		transition-duration: 0.4s;
+	}
+
+	#spin:hover {
+		transform: scale(1.2);
+	}
+
+
+	/*order button*/
+
+
+
+}
+
+@media screen and (width >=1280px) {
+	body {
+		background-image: url(../images/Table.svg);
+		background-position: 50% 200px;
+		background-size: 150%;
+		background-repeat: no-repeat;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(10, 1fr);
+	}
+
+	/* Title Bar & Instruction Line */
+
+	.header {
+		padding: 20px;
+		background-color: #66BE71;
+		font-family: "Koulen";
+		color: white;
+		margin-right: 0px;
+		text-align: center;
+		font-size: 2em;
+		letter-spacing: 5px;
+		margin-top: 0px;
+		grid-column: 1 / span 6;
+		grid-row: 1 / span 1;
+	}
+
+	.title {
+		font-family: "Koulen";
+		color: #434343;
+		text-align: center;
+		font-size: 2em;
+		margin-top: 50px;
+		letter-spacing: 2px;
+		grid-column: 1 / span 6;
+		grid-row: 2 / span 1;
+	}
+
+	h1 {
+		border: 0px;
+		margin: 0px;
+	}
+
+	/* Main Part */
+
+	.main {
+		display: grid;
+		grid-template-rows: 1;
+		grid-template-columns: 3;
+		justify-content: center;
+		margin-top: 30px;
+		scale: 100%;
+		grid-column: 1 / span 6;
+		grid-row: 3/ span 9;
+	}
+
+	/* Main Part  Element*/
+
+	.fork {
+		height: 60%;
+		grid-row: 1;
+		grid-column: 1;
+	}
+
+	.spoon {
+		height: 60%;
+		grid-row: 1;
+		grid-column: 3;
+	}
+
+	/* Spin Wheel*/
+
+	.wheel {
 		height: 80%;
+		transition: transform 3s ease-in-out;
+		grid-row: 1;
+		grid-column: 2;
 	}
-	.wheel{
+
+	.wheelhide {
+		display: none;
+	}
+
+	/* Blank Plate*/
+
+	.platehide {
+		display: none;
+	}
+
+	.plate {
 		height: 80%;
-		transition: transform 5s ease-in-out;
+		margin-top: 3%;
+		grid-row: 1;
+		grid-column: 2;
 	}
-	.spoon{
-		margin: auto;
-		height: 80%;
+
+	/* Gift Box*/
+
+	.gifthide {
+		display: none;
 	}
-	
-	#spin{
-		position: absolute;
-		margin-left: 48%;
+
+	.gift {
+		background: url(../images/gift.svg);
+		margin-top: 320px;
+		margin-left: 40%;
+		width: 160px;
+		height: 160px;
+		border: none;
+		transition-duration: 0.4s;
+		grid-row: 1;
+		grid-column: 2;
+		z-index: 1;
+	}
+
+	.gift:hover {
+		transform: scale(1.2);
+	}
+
+	/* Start Button*/
+
+	.start {
+		display: flex;
+		justify-content: center;
+		grid-column: 1 / span 6;
+		grid-row: 3 / span 2;
+		z-index: 1;
+	}
+
+	#spin {
+		width: 220px;
+		height: 200px;
+		background: url(../images/start.svg);
+		border: none;
+		margin-top: -10px;
+		transition-duration: 0.4s;
+	}
+
+	#spin:hover {
+		transform: scale(1.2);
+	}
+
+	/*order button*/
+
+	.results {
+		display: grid;
+		grid-template-columns: repeat(9, 1fr);
+		grid-template-rows: repeat(10, 1fr);
+		grid-row: 1;
+		grid-column: 2;
+	}
+
+	#order {
+		border: #4F8A57 6px solid;
+		border-radius: 70px;
+		font-family: "Kaushan Script", cursive;
+		background-color: #66BE71;
+		color: white;
+		font-size: 2em;
+		padding: 20px;
+		grid-row: 4/span 1;
+		grid-column: 4/span 3;
+		transition-duration: 0.4s;
+	}
+
+	#resetdish {
+		border: #F7B60E 6px solid;
+		border-radius: 70px;
+		font-family: "Koulen";
+		margin-top: 20px;
+		background-color: #F1E363;
+		color: black;
+		font-size: 1.5em;
+		padding: 20px;
+		grid-row: 5/span 1;
+		grid-column: 3/span 2;
+		transition-duration: 0.4s;
+	}
+
+	#resetall {
+		border: #F70E0E 6px solid;
+		border-radius: 70px;
+		font-family: "Koulen";
+		margin-top: 20px;
+		background-color: #F17D63;
+		color: black;
+		font-size: 1.5em;
+		padding: 20px;
+		grid-row: 5/span 1;
+		grid-column: 6/span 2;
+		transition-duration: 0.4s;
+	}
+
+	#order:hover {
+		transform: scale(1.2);
+	}
+
+	#resetdish:hover {
+		transform: scale(1.2);
+	}
+
+	#resetall:hover {
+		transform: scale(1.2);
 	}
 
 }
