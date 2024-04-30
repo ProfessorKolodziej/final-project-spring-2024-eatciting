@@ -1,4 +1,4 @@
-@media screen and (320px <=width <834px) {
+@media screen and (375px <=width <768px) {
 
 	body {
 		background-image: url(../images/Table.svg);
@@ -129,7 +129,7 @@
 		z-index: 1;
 	}
 
-	.gift:hover {
+	.gift:active {
 		transform: scale(1.2);
 	}
 
@@ -152,7 +152,7 @@
 		transition-duration: 0.4s;
 	}
 
-	#spin:hover {
+	#spin:active {
 		transform: scale(1.2);
 	}
 
@@ -172,14 +172,14 @@
 	#order {
 		border: #4F8A57 6px solid;
 		border-radius: 70px;
-		font-family: "Kaushan Script", cursive;
+		font-family: "Arvo", serif;
 		background-color: #66BE71;
 		color: white;
-		font-size: 1em;
-		padding: 10px;
+		font-size: 1.3em;
+		padding: 8px;
 		grid-row: 4/span 1;
 		grid-column: 3/span 5;
-		transition-duration: 0.4s;
+		height: 120%;
 	}
 
 	#resetdish {
@@ -189,11 +189,11 @@
 		margin-top: 20px;
 		background-color: #F1E363;
 		color: black;
-		font-size: .6em;
+		font-size: 1em;
+		height: 50%;
 		padding: 5px;
-		grid-row: 5/span 1;
-		grid-column: 3/span 2;
-		transition-duration: 0.4s;
+		grid-row: 5/span 2;
+		grid-column: 2/span 3;
 	}
 
 	#resetall {
@@ -203,30 +203,62 @@
 		margin-top: 20px;
 		background-color: #F17D63;
 		color: black;
-		font-size: .8em;
+		height: 50%;
+		font-size: 1em;
 		padding: 5px;
-		grid-row: 5/span 1;
-		grid-column: 6/span 2;
+		grid-row: 5/span 2;
+		grid-column: 6/span 3;
+	}
+
+	#order:active {
+		border: #4F8A57 6px solid;
+		border-radius: 70px;
+		font-family: "Arvo", serif;
+		background-color: #4F8A57;
+		color: white;
+		font-size: 1.2em;
+		padding: 10px;
+		grid-row: 4/span 1;
+		grid-column: 3/span 5;
+		transition-duration: 0.1s;
+		height: 120%;
+	}
+
+	#resetdish:active {
+		border: #F7B60E 3px solid;
+		border-radius: 70px;
+		font-family: "Koulen";
+		margin-top: 20px;
+		background-color: #F7B60E;
+		color: black;
+		font-size: 1em;
+		height: 50%;
+		padding: 5px;
+		grid-row: 5/span 2;
+		grid-column: 2/span 3;
+		transition-duration: 0.1s;
+	}
+
+	#resetall:active {
+		border: #F70E0E 3px solid;
+		border-radius: 70px;
+		font-family: "Koulen";
+		margin-top: 20px;
+		background-color: #F70E0E;
+		color: black;
+		height: 50%;
+		font-size: 1em;
+		padding: 5px;
+		grid-row: 5/span 2;
+		grid-column: 6/span 3;
 		transition-duration: 0.4s;
-	}
-
-	#order:hover {
-		transform: scale(1.2);
-	}
-
-	#resetdish:hover {
-		transform: scale(1.2);
-	}
-
-	#resetall:hover {
-		transform: scale(1.2);
 	}
 
 }
 
 
 
-@media screen and (834px <=width <1280px) {
+@media screen and (768px <=width <1024px) {
 
 	body {
 		background-image: url(../images/Table.svg);
@@ -236,6 +268,7 @@
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
 		grid-template-rows: repeat(8, 1fr);
+		height: 1024px;
 	}
 
 	/* Title Bar & Instruction Line */
@@ -280,22 +313,22 @@
 		margin-top: 30px;
 		scale: 100%;
 		grid-column: 1 / span 6;
-		grid-row: 3/ span 9;
+		grid-row: 2/ span 5;
 	}
 
 	/* Main Part  Element*/
 
 	.fork {
-		margin-top: 50%;
-		height: 60%;
+		margin-top: 250px;
+		height: 50%;
 		grid-row: 1/span 3;
 		grid-column: 1/span 1;
 		z-index: 1;
 	}
 
 	.spoon {
-		margin-top: 50%;
-		height: 60%;
+		margin-top: 250px;
+		height: 50%;
 		grid-row: 1/span 3;
 		grid-column: 9/span 1;
 		z-index: 1;
@@ -304,8 +337,8 @@
 	/* Spin Wheel*/
 
 	.wheel {
-		margin-top: 50px;
-		height: 818px;
+		margin-top: 150px;
+		height: 680px;
 		width: 100%;
 		transition: transform 3s ease-in-out;
 		grid-row: 1/ span 3;
@@ -323,10 +356,9 @@
 	}
 
 	.plate {
-		margin-top: 50px;
-		height: 818px;
+		margin-top: 150px;
+		height: 680px;
 		width: 100%;
-		transition: transform 3s ease-in-out;
 		grid-row: 1/ span 3;
 		grid-column: 1/span 9;
 	}
@@ -343,12 +375,13 @@
 		height: 160px;
 		border: none;
 		transition-duration: 0.4s;
-		grid-row: 2/ span 1;
+		margin-top: -150px;
+		grid-row: 3/ span 1;
 		grid-column: 5/ span 1;
 		z-index: 1;
 	}
 
-	.gift:hover {
+	.gift:active {
 		transform: scale(1.2);
 	}
 
@@ -358,20 +391,21 @@
 		display: flex;
 		justify-content: center;
 		grid-column: 1 / span 6;
-		grid-row: 3 / span 2;
+		grid-row: 2 / span 2;
 		z-index: 1;
 	}
 
 	#spin {
 		width: 220px;
 		height: 200px;
+		scale: 80%;
 		background: url(../images/start.svg);
 		border: none;
-		margin-top: -10px;
+		margin-top: 80px;
 		transition-duration: 0.4s;
 	}
 
-	#spin:hover {
+	#spin:active {
 		transform: scale(1.2);
 	}
 
@@ -381,7 +415,7 @@
 		display: grid;
 		grid-template-columns: repeat(9, 1fr);
 		grid-template-rows: repeat(10, 1fr);
-		grid-row: 1/ span 3;
+		grid-row: 2/ span 2;
 		grid-column: 1/span 9;
 	}
 
@@ -392,14 +426,13 @@
 	#order {
 		border: #4F8A57 6px solid;
 		border-radius: 70px;
-		font-family: "Kaushan Script", cursive;
+		font-family: "Arvo", serif;
 		background-color: #66BE71;
 		color: white;
 		font-size: 2em;
-		padding: 20px;
-		grid-row: 4/span 1;
+		padding: 10px;
+		grid-row: 3/span 1;
 		grid-column: 3/span 5;
-		transition-duration: 0.4s;
 	}
 
 	#resetdish {
@@ -410,10 +443,9 @@
 		background-color: #F1E363;
 		color: black;
 		font-size: 1.5em;
-		padding: 20px;
-		grid-row: 5/span 1;
+		padding: 10px;
+		grid-row: 4/span 1;
 		grid-column: 3/span 2;
-		transition-duration: 0.4s;
 	}
 
 	#resetall {
@@ -424,28 +456,54 @@
 		background-color: #F17D63;
 		color: black;
 		font-size: 1.5em;
-		padding: 20px;
-		grid-row: 5/span 1;
+		padding: 10px;
+		grid-row: 4/span 1;
 		grid-column: 6/span 2;
-		transition-duration: 0.4s;
 	}
 
-	#order:hover {
-		transform: scale(1.2);
+	#order:active {
+		border: #4F8A57 6px solid;
+		border-radius: 70px;
+		font-family: "Arvo", serif;
+		background-color: #4F8A57;
+		color: white;
+		font-size: 2em;
+		padding: 10px;
+		grid-row: 3/span 1;
+		grid-column: 3/span 5;
+		transition-duration: 0.1s;
 	}
 
-	#resetdish:hover {
-		transform: scale(1.2);
+	#resetdish:active {
+		border: #F7B60E 6px solid;
+		border-radius: 70px;
+		font-family: "Koulen";
+		margin-top: 20px;
+		background-color: #F7B60E;
+		color: black;
+		font-size: 1.5em;
+		padding: 10px;
+		grid-row: 4/span 1;
+		grid-column: 3/span 2;
 	}
 
-	#resetall:hover {
-		transform: scale(1.2);
+	#resetall:active {
+		border: #F70E0E 6px solid;
+		border-radius: 70px;
+		font-family: "Koulen";
+		margin-top: 20px;
+		background-color: #F70E0E;
+		color: black;
+		font-size: 1.5em;
+		padding: 10px;
+		grid-row: 4/span 1;
+		grid-column: 6/span 2;
 	}
 
 
 }
 
-@media screen and (width >=1280px) {
+@media screen and (width >=1024px) {
 
 
 	body {
@@ -456,6 +514,7 @@
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
 		grid-template-rows: repeat(10, 1fr);
+		height: 900px;
 	}
 
 	/* Title Bar & Instruction Line */
@@ -479,7 +538,7 @@
 		color: #434343;
 		text-align: center;
 		font-size: 2em;
-		margin-top: 50px;
+		margin-top: 30px;
 		letter-spacing: 2px;
 		grid-column: 1 / span 6;
 		grid-row: 2 / span 1;
@@ -497,7 +556,7 @@
 		grid-template-rows: 1;
 		grid-template-columns: 3;
 		justify-content: center;
-		margin-top: 30px;
+		margin-top: 70px;
 		scale: 100%;
 		grid-column: 1 / span 6;
 		grid-row: 3/ span 9;
@@ -506,13 +565,13 @@
 	/* Main Part  Element*/
 
 	.fork {
-		height: 60%;
+		height: 50%;
 		grid-row: 1;
 		grid-column: 1;
 	}
 
 	.spoon {
-		height: 60%;
+		height: 50%;
 		grid-row: 1;
 		grid-column: 3;
 	}
@@ -520,7 +579,8 @@
 	/* Spin Wheel*/
 
 	.wheel {
-		height: 80%;
+		margin-top: -40px;
+		height: 70%;
 		transition: transform 3s ease-in-out;
 		grid-row: 1;
 		grid-column: 2;
@@ -537,8 +597,8 @@
 	}
 
 	.plate {
-		height: 845.9px;
-		margin-top: 3%;
+		margin-top: -40px;
+		height: 670px;
 		grid-row: 1;
 		grid-column: 2;
 	}
@@ -551,8 +611,8 @@
 
 	.gift {
 		background: url(../images/gift.svg);
-		margin-top: 320px;
-		margin-left: 40%;
+		margin-top: 200px;
+		margin-left: 38%;
 		width: 160px;
 		height: 160px;
 		border: none;
@@ -572,16 +632,17 @@
 		display: flex;
 		justify-content: center;
 		grid-column: 1 / span 6;
-		grid-row: 3 / span 2;
+		grid-row: 2 / span 2;
 		z-index: 1;
 	}
 
 	#spin {
+		scale: 80%;
 		width: 220px;
 		height: 200px;
 		background: url(../images/start.svg);
 		border: none;
-		margin-top: -10px;
+		margin-top: 60px;
 		transition-duration: 0.4s;
 	}
 
@@ -606,12 +667,12 @@
 	#order {
 		border: #4F8A57 6px solid;
 		border-radius: 70px;
-		font-family: "Kaushan Script", cursive;
+		font-family: "Arvo", serif;
 		background-color: #66BE71;
 		color: white;
-		font-size: 2em;
-		padding: 20px;
-		grid-row: 4/span 1;
+		font-size: 1.5em;
+		padding: 10px;
+		grid-row: 3/span 1;
 		grid-column: 3/span 5;
 		transition-duration: 0.4s;
 	}
@@ -623,9 +684,9 @@
 		margin-top: 20px;
 		background-color: #F1E363;
 		color: black;
-		font-size: 1.5em;
-		padding: 20px;
-		grid-row: 5/span 1;
+		font-size: 1.2em;
+		padding: 10px;
+		grid-row: 4/span 1;
 		grid-column: 3/span 2;
 		transition-duration: 0.4s;
 	}
@@ -637,9 +698,9 @@
 		margin-top: 20px;
 		background-color: #F17D63;
 		color: black;
-		font-size: 1.5em;
-		padding: 20px;
-		grid-row: 5/span 1;
+		font-size: 1.2em;
+		padding: 10px;
+		grid-row: 4/span 1;
 		grid-column: 6/span 2;
 		transition-duration: 0.4s;
 	}

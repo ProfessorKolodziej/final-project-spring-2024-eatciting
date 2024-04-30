@@ -54,9 +54,9 @@ const showBox = document.querySelector('.gifthide');
 function showGift() {
 	showBox.classList.toggle('gifthide')
 	showBox.classList.toggle('gift')
-	if (window.innerWidth >= 834) {
+	if (window.innerWidth >= 1024) {
 		window.scroll({
-			top: 400,
+			top: 300,
 			left: 0,
 			behavior: 'smooth'
 		});
